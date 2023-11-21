@@ -34,53 +34,6 @@ local lualine = {
   end
 }
 
--- Config gitsigns
-local gitsigns = {
-  'lewis6991/gitsigns.nvim',
-  event = { "BufReadPre", "BufNewFile" },
-  config = function()
-    require('gitsigns').setup {
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
-    }
-    -- keymap for previewing hunks
-    vim.keymap.set('n', '<leader>gh', '<cmd>Gitsigns preview_hunk<cr>', { desc = '[G]itsigns preview [H]unks' })
-    vim.keymap.set('n', '<leader>gp', '<cmd>Gitsigns prev_hunk<cr>', { desc = '[G]itsigns [P]revious hunk' })
-    vim.keymap.set('n', '<leader>gn', '<cmd>Gitsigns next_hunk<cr>', { desc = '[G]itsigns [N]ext hunk' })
-  end
-}
-
-
--- Config toggleterm
-local toggleterm = {
-  'akinsho/toggleterm.nvim',
-  version = '*', -- Terminal
-  cmd = { 'ToggleTerm' },
-  config = function()
-    require('toggleterm').setup({
-      size = function(term)
-        if term.direction == 'horizontal' then
-          return 15
-        elseif term.direction == 'vertical' then
-          return vim.o.columns * 0.4
-        end
-      end
-    })
-    -- set keymaps to easily move between buffers and terminal
-    function _G.set_terminal_keymaps()
-      local opts = { buffer = 0 }
-      vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-      vim.keymap.set('t', 'jk', [[<C-\><C-n><Cmd>ToggleTerm<CR>]], opts)
-    end
-
-    vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-  end
-}
 
 -- Config nvim-tree
 local nvimtree = {
@@ -363,8 +316,6 @@ require('lazy').setup({
 
   -- UI related
   lualine,
-  gitsigns,
-  toggleterm,
   nvimtree,
 
   -- Coding
