@@ -1,5 +1,3 @@
 
-require("lua.basic")
-
---lazy 
-require("lua.lazynvim-init")
+require("basic")
+require("plugin")
