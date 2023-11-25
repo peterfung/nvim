@@ -33,3 +33,11 @@ opt.smartcase = true
 -- 外观
 opt.termguicolors = true
 opt.signcolumn = "yes"
+
+-- 折叠
+opt.foldmethod = "syntax"
+
+-- 高亮
+vim.cmd([[highlight Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold]])
+vim.cmd([[highlight CursorLine guibg=#303030]])
+vim.cmd([[highlight Search gui=bold guibg=#B8860B guifg=black]])
