@@ -36,6 +36,7 @@ opt.signcolumn = "yes"
 
 -- 折叠
 opt.foldmethod = "syntax"
+opt.foldlevelstart=99 --打开文件时默认不折叠
 
 -- 高亮
 vim.cmd([[highlight Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold]])
