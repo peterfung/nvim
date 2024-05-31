@@ -17,4 +17,4 @@ telescope 全局搜索功能依赖rigrep
 
 Mac: `brew install ripgrep`  
 Debian: `sudo apt-get install ripgrep`  
-Windows: 从github release下载exec 文件，添加到文件变量。在终端输入rg测试是否识别
+Windows: 从github release下载exec 文件，添加到环境变量。在终端输入rg测试是否识别
