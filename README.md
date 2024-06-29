@@ -22,3 +22,4 @@ Windows: 从github release下载exec 文件，添加到环境变量。在终端�
 ### font
 要显示图标，在github搜索想要的字体patched nerd font下载放到系统字体目录，然后在终端设置该字体
 
+
